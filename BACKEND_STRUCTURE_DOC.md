@@ -1,4 +1,4 @@
-# Tenant and Owner Management System Documentation
+# rentkhojo System Documentation
 
 ## Overview
 
