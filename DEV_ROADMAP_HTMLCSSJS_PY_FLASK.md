@@ -1,6 +1,3 @@
-Here’s a suggested development roadmap for your Tenant and Owner Management System using HTML, CSS, JavaScript for the frontend, Python Flask for the backend, and MySQL for the database:
-
----
 
 ## **Development Roadmap**
 
@@ -138,6 +135,3 @@ Here’s a suggested development roadmap for your Tenant and Owner Management Sy
 - **Week 7**: Deployment and user acceptance testing.
 - **Ongoing**: Maintenance and feature updates.
 
----
-
-Let me know if you'd like to expand on any section!
