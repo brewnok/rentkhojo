@@ -1,4 +1,4 @@
-## **Recommended Tech Stack**
+## **Recommended Tech Stack For rentkhojo**
 ### **Frontend**: 
 **React.js**
 - React provides a component-based architecture, reusable UI components, and efficient state management.
