@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Tenant and Owner Management System is designed to manage the information and photo records of tenants and owners. The system maintains a structured directory for storing photos of ID cards, selfies, and room photos for both tenants and owners. It also includes tables for storing detailed information about tenants, owners, and rooms.
+The Tenant and Owner Management System is designed to manage the information of tenants and owners. The system maintains a structured directory for storing room photos for owners
 
 ## Directory Structure
 
@@ -10,31 +10,14 @@ The Tenant and Owner Management System is designed to manage the information and
 - `tenant/`
 - `owner/`
 
-### Tenant Folder Structure
-Each tenant's folder is named after their first name. Inside each tenant folder, there are two subfolders:
-- `id/`: Contains ID card photos.
-- `selfie/`: Contains selfie photos.
-
-Example:
-```
-tenant/Carl/├── id/
-│   └── carl_id.jpg
-└── selfie/
-    └── carl_selfie.jpg
-```
-
 ### Owner Folder Structure
-Each owner's folder is named after their first name. Inside each owner's folder, there are three subfolders:
-- `id/`: Contains ID card photos.
-- `selfie/`: Contains selfie photos.
+Each owner's folder is named after their firstname_phone. Inside each owner's folder, there are three subfolders:
 - `room/`: Contains subfolders for each room managed by the owner, which further contain room photos.
 
 Example:
 ```
-owner/John/├── id/
-│   └── john_id.jpg
-├── selfie/
-│   └── john_selfie.jpg
+owner/John_1234567890/
+│
 └── room/
     ├── room1/
     │   ├── room1_photo1.jpg
@@ -53,24 +36,22 @@ This table stores information about the owners.
 |-------------------|---------|-----------------------------------------------|
 | id                | INT     | Unique identifier for the owner.              |
 | phone_number      | STRING  | Phone number of the owner.                    |
-| full_name         | STRING  | Full name of the owner.                       |
-| id_card_photo     | STRING  | Path to the owner's ID card photo.            |
-| selfie            | STRING  | Path to the owner's selfie photo.             |
-| created_at        | DATETIME| Timestamp when the record was created.        |
-| updated_at        | DATETIME| Timestamp when the record was last updated.   |
+| firstname         | STRING  | First name of the owner.                      |
+| lastname          | STRING  | Last name of the owner.                       |
+| PIN               | STRING  | Login PIN                                     |
+| created_at        | DATE    | Date when the record was created.             |
 
 ### Tenants Table
 This table stores information about the tenants.
 
 | Column            | Type    | Description                                   |
 |-------------------|---------|-----------------------------------------------|
-| id                | INT     | Unique identifier for the tenant.             |
-| phone_number      | STRING  | Phone number of the tenant.                   |
-| full_name         | STRING  | Full name of the tenant.                      |
-| id_card_photo     | STRING  | Path to the tenant's ID card photo.           |
-| selfie            | STRING  | Path to the tenant's selfie photo.            |
-| created_at        | DATETIME| Timestamp when the record was created.        |
-| updated_at        | DATETIME| Timestamp when the record was last updated.   |
+| id                | INT     | Unique identifier for the tenat.              |
+| phone_number      | STRING  | Phone number of the tenat.                    |
+| firstname         | STRING  | First name of the tenat.                      |
+| lastname          | STRING  | Last name of the tenat.                       |
+| PIN               | STRING  | Login PIN                                     |
+| created_at        | DATE    | Date when the record was tenat.               |
 
 ### Rooms Table
 This table stores information about the rooms managed by the owners.
