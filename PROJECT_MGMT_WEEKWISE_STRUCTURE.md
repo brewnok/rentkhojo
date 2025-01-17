@@ -2,16 +2,16 @@
 #### **Backend Engineer**:
 1. Set up a **Node.js** project and initialize Express.js.
 2. Install necessary packages: 
-   - `express`, `sequelize`, `cors`, `dotenv`, `jsonwebtoken`, `multer`, etc.
+   - `express`, `sequelize`, `cors`, `dotenv`, `multer`, etc. [ **TBD** ]
 3. Configure basic routes and middleware (CORS, request parsing).
 4. Create a folder structure for controllers, routes, and middleware.
 
 #### **DBA**:
 1. Design the database schema:
-   - Tables: **Users**, **Rooms**, and **RoomPhotos**.
+   - Tables: **Owner**, **Tenat**, and **RoomsTable**.
    - Relationships:
      - Owner → Rooms (One-to-Many).
-     - Rooms → RoomPhotos (One-to-Many).
+     - RoomsTable → RoomPhotos (One-to-Many).
 2. Implement the schema in MySQL/PostgreSQL.
 3. Create the database using an SQL editor or migration tools.
 4. Share the database connection credentials with the backend engineer.
@@ -22,13 +22,13 @@
 #### **Backend Engineer**:
 1. Implement user authentication APIs:
    - Register, login, and logout.
-   - Generate and validate JWT tokens.
+   - Generate and validate PIN set by the end user.
 2. Develop CRUD APIs for:
    - **Tenants**: Retrieve available rooms.
    - **Owners**: Add, update, and delete room entries.
    - Add file upload functionality using Multer.
 3. Integrate the database using Sequelize:
-   - Configure models for `Users`, `Rooms`, and `RoomPhotos`.
+   - Configure models for **Owner**, **Tenat**, and **RoomsTable**..
    - Test basic database operations.
 
 #### **DBA**:
@@ -86,10 +86,9 @@
    - Use Axios/Fetch API to connect frontend with backend.
    - Add loading spinners and error handling for API calls.
 2. Complete authentication flow:
-   - Save tokens in `localStorage` or as HttpOnly cookies.
+   - Add authentication API for authenticating login information provided by tenat/owner
    - Redirect users based on roles (tenant/owner).
 3. Finalize Owner Dashboard:
-   - Implement toggles for marking rooms as "Free" or "Rented."
    - Test image upload functionality.
 
 #### **Backend Engineer**:
