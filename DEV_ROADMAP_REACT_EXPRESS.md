@@ -10,18 +10,16 @@
 - Node.js is highly scalable and performs well with concurrent requests, which is useful for real-time search and updates in your app.
 
 ### **Database**:
-**PostgreSQL** or **MySQL**
-- Both are relational databases suitable for structured data like tenants, owners, and rooms.
-- **PostgreSQL** offers advanced features like JSONB for semi-structured data and is highly scalable.
+**MySQL**
 - **MySQL** is widely used, has rich documentation, and is slightly easier to start with for simpler use cases.
 
 ### **File Storage**:
 **Cloud Storage (e.g., AWS S3 or Google Cloud Storage)**
-- Storing images (ID cards, selfies, and room photos) in a scalable cloud storage solution is better than keeping them on local servers. 
+- Storing images (room photos) in a scalable cloud storage solution is better than keeping them on local servers. 
 
 ### **Authentication**:
-**JWT (JSON Web Tokens)** for session management or OAuth2 for third-party logins (if needed).
-- JWT provides secure, stateless authentication.
+**PIN Based Login by verifying from the DB entry** for session management.
+
 
 ### **Other Tools**:
 - **Frontend State Management**: Redux Toolkit or React Context API.
@@ -42,8 +40,8 @@
    - Install UI libraries (e.g., Material-UI or Tailwind CSS).
 2. **Backend**:
    - Initialize a Node.js project using `npm init`.
-   - Set up Express.js and install required libraries (`express`, `sequelize`, `jsonwebtoken`, etc.).
-   - Configure a MySQL/PostgreSQL database.
+   - Set up Express.js and install required libraries (`express`, `sequelize` etc.).
+   - Configure a MySQL database.
 3. **Version Control**:
    - Set up GitHub or GitLab for version control and collaboration.
 
@@ -72,14 +70,12 @@
 - Build a user-friendly interface for tenants and owners.
 1. **Authentication Pages**:
    - Create login and registration forms.
-   - Add OTP verification UI (if required).
 2. **Tenant Features**:
    - Develop a search page with filters for room type, price, and location.
    - Display search results in a card/grid format with room photos and details.
    - Room detail page with a photo carousel.
 3. **Owner Features**:
    - Create a dashboard to manage room listings (add/edit/delete).
-   - Implement toggles for marking rooms as "Rented" or "Free."
    - Add photo upload forms for room images.
 4. **Global State Management**:
    - Use **Redux Toolkit** or React Context API to manage user sessions and app state.
@@ -91,7 +87,6 @@
 - Connect frontend and backend for full functionality.
 1. **API Integration**:
    - Use **Axios** or **Fetch API** to consume backend APIs in React.
-   - Manage tokens for authentication (store in HttpOnly cookies or localStorage).
 2. **Dynamic Components**:
    - Populate the tenant's search results dynamically based on API responses.
    - Display owner's dashboard with room status (Free/Rented).
@@ -133,7 +128,7 @@
 - Ensure smooth performance and add new features.
 1. **Performance Monitoring**:
    - Use **Google Analytics** for frontend performance.
-   - Use **PM2** or **New Relic** for backend monitoring.
+   - Use **New Relic** for backend monitoring.
 2. **User Feedback**:
    - Implement a feedback feature to collect suggestions and bug reports.
 3. **Scalability**:
